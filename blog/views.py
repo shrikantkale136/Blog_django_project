@@ -4,15 +4,15 @@ from django.http import HttpResponse
 #data 
 posts = [
     {
-        'author': 'CoreyMS',
-        'title': 'Blog Post 1',
-        'content': 'First post content',
+        'author': 'Shrikant K.',
+        'title': 'Django UI Framework',
+        'content': 'Learn how to make UI using Django',
         'date_posted': 'August 27, 2018'
     },
     {
-        'author': 'Jane Doe',
-        'title': 'Blog Post 2',
-        'content': 'Second post content',
+        'author': 'Girish M.',
+        'title': 'Data Science',
+        'content': 'Learn Data Science Fundamentals.',
         'date_posted': 'August 28, 2018'
     }
 ]
