@@ -22,7 +22,7 @@ from .models import Post
 
 
 def home(request):
-    context = {'posts': Post.objects.all(), 'title': 'Home'}
+    context = {'posts': Post.objects.all().order_by('-date_posted'), 'title': 'Home'}
     return render(request, 'blog/home.html', context)
 
 
