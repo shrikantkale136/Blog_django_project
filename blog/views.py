@@ -5,8 +5,8 @@ from .models import Post
 import json
 import requests
 url = "https://reqres.in/api/users?page=1"
-r = requests.get(url)
-db = r.json()
+getData = requests.get(url)
+db = getData.json()
 
 # Create your views here.
 def home(request):
@@ -15,4 +15,4 @@ def home(request):
 
 
 def about(request):
-    return render(request, 'blog/about.html', {'title': 'About','data' : db})
+    return render(request, 'blog/about.html', {'title': 'About','posts' : db})
