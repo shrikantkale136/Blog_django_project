@@ -31,3 +31,4 @@ docs/_build/
 target/
 *.pyc
 firstProject/__pycache__/
+blog/__pycache__/views.cpython-37.pyc

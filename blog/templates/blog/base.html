@@ -39,8 +39,15 @@
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
             {% if user.is_authenticated %}
-                <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
-                <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{user.username | capfirst}}
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
+                    <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                </li>
+
             {% else %}
                 <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
                 <a class="nav-item nav-link" href="{% url 'resister' %}">Register</a>
@@ -79,11 +86,11 @@
          {% endif %}
       </div>
     </main>
-    <footer class="footer">
+    {% comment %} <footer class="footer">
       <div class="container">
         <span class="text-muted">Developed By @ShrikantKale</span>
       </div>
-    </footer>
+    </footer> {% endcomment %}
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
